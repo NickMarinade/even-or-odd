@@ -1,6 +1,25 @@
 debugger;
 
-const renderList = () => { };
+const renderList = (currentArray, currentDisplayed) => {
+  let divEl = document.createElement('div');
+  divEl.setAttribute('íd', currentDisplayed);
+
+  let h4El = document.createElement('h4');
+  h4El.innerHTML = currentDisplayed;
+  divEl.appendChild(h4El);
+
+  let ulEl = document.createElement('ul');
+
+  let i;
+  for (i = 0; i < currentArray.length; i++) {
+    let liEl = document.createElement('li');
+    liEl.innerHTML = currentArray[i];
+    ulEl.appendChild(liEl);
+  }
+  divEl.appendChild(ulEl);
+  return divEl;
+
+ };
 
 
 console.log('-- testing renderList component --\n');
