@@ -1,6 +1,6 @@
 function resetHandler() {
   // reset state
-  strings.displayed = 'evens';
+  strings.displayed = '';
   strings.evens = [];
   strings.odds = [];
   strings.NaNy = [];
@@ -22,4 +22,5 @@ function resetHandler() {
   });
   document.getElementById('odds-button').addEventListener('click', oddsHandler);
   document.getElementById('evens-button').addEventListener('click', evensHandler);
+  document.getElementById('nany-button').addEventListener('click', nanyHandler);
 };
