@@ -1,6 +1,7 @@
 function resetHandler() {
+  debugger;
   // reset state
-  strings.displayed = '';
+  strings.displayed = 'evens';
   strings.evens = [];
   strings.odds = [];
   strings.NaNy = [];
@@ -12,7 +13,7 @@ function resetHandler() {
   const currentListComponent = renderList(currentArray, currentDisplayed);
 
   const listContainer = document.getElementById('selected');
-  listContainer.innerHTML = '';
+  //listContainer.innerHTML = '';
   listContainer.appendChild(currentListComponent);
 
   // log interaction: handler name, new state
@@ -20,6 +21,7 @@ function resetHandler() {
     handler: 'reset',
     strings: JSON.parse(JSON.stringify(strings))
   });
+  listContainer.innerHTML = '';
   document.getElementById('odds-button').addEventListener('click', oddsHandler);
   document.getElementById('evens-button').addEventListener('click', evensHandler);
   document.getElementById('nany-button').addEventListener('click', nanyHandler);
