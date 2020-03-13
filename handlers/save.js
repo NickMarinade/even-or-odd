@@ -14,6 +14,7 @@ function saveHandler() {
   } else {
     strings.NaNy.push(inputEl);
   }
+  document.getElementById('input').value = '';
   
 
   // log user interaction: handler name, user input, new state
