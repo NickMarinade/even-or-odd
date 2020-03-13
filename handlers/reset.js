@@ -20,4 +20,6 @@ function resetHandler() {
     handler: 'reset',
     strings: JSON.parse(JSON.stringify(strings))
   });
+  document.getElementById('odds-button').addEventListener('click', oddsHandler);
+  document.getElementById('evens-button').addEventListener('click', evensHandler);
 };
